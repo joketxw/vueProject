@@ -1,0 +1,158 @@
+@import "../../sass/conmon.scss";
+@import "../../sass/icon.scss";
+.content{
+    
+}
+.topBack{
+//  background: no-repeat  0 url(/static/images/personal/topBack.png);
+//    background-size:100%;
+    width: 100%;
+    height: toRem(160px);
+    position: absolute;
+    z-index: 98;
+}
+.topdiv{
+    height: toRem(160px);
+    width: 100%;
+    z-index: 100;
+    border-top:0.1px  #fa7319 solid;
+    position: relative;
+    .userPic{
+    width: toRem(58px);
+    height: toRem(58px);
+    display: block;
+    margin: toRem(25px) auto toRem(8px) auto;
+    border-radius: toRem(29px);
+    
+   }
+   .userName{
+       text-align: center;
+       color: #fff;
+       font-size: toRem(16px);
+   }
+   .idBox{
+       font-size:toRem(12px);
+       color: #faebe1;
+       background: #e06614;
+       width: toRem(92px);
+       text-align: center;
+       line-height: toRem(23px);
+       border-radius: toRem(23px);
+       margin: toRem(10px) auto 0 auto;
+   }
+   .leftText{
+       font-size: toRem(19px);
+       color: #fff;
+       position: absolute;
+       left: toRem(10px);
+       top:toRem(15px);
+   }
+   .news{
+       position: absolute;
+       right:toRem(5px);
+       top: 0;
+       background: no-repeat  center url(/static/images/personal/news.png);
+       background-size:50%;
+       width:toRem(50px);
+       height: toRem(50px);
+       .newsNum{
+           position: absolute;
+           width: toRem(25px);
+           height: toRem(20px);
+           background: #f8353e;
+           color: #fff;
+           text-align: center;
+           line-height: toRem(20px);
+           border-radius:toRem(10px);
+           right: toRem(5px);
+           top:toRem(3px);
+       }
+   }
+}
+.topMenu{
+    //padding-bottom: toRem(13px);
+    height: toRem(75px);
+   
+    div{
+        flex: 1;
+        text-align: center;
+        font-size: toRem(12px);
+        img{
+            width: toRem(27px);
+            height: toRem(27px);
+            margin: toRem(10px) auto;
+        }
+        &:active{
+                background: #f2f2f5;
+        }
+    }
+    
+}
+.nextMenu{
+    .orderBox{
+        @include flex-pack-justify();
+        line-height: toRem(50px);
+        color: #3d3d3d;
+        font-size:toRem(16px);
+        .myOrder{
+            margin-left: toRem(13px);
+        }
+        .lookAll{
+            margin-right: toRem(13px);
+            color: #999999;
+            font-size:toRem(14px);
+        }
+        &:active{
+                background: #f2f2f5;
+        }
+    }
+    .myMenu{
+        height: toRem(75px);
+        //padding-bottom: toRem(13px);
+        div{ 
+             flex: 1;
+             text-align: center;
+             font-size: toRem(12px);
+             position: relative;
+             top:toRem(3px);
+             .num{
+                 position: absolute;
+                 width: toRem(5px);
+                 height: toRem(5px);
+                 right: toRem(22px);
+                 top:  toRem(5px);
+                 color: #ff311f;
+                 font-size: toRem(8px);
+             }
+             img{
+               width: toRem(25px);
+               height: toRem(22px);
+               margin: toRem(10px) auto;
+            }
+            &:active{
+                background: #f2f2f5;
+            }
+        }
+        
+    }
+    
+    
+}
+.mySpellingList{
+    @include flex-pack-justify();
+    color: #3d3d3d;
+    font-size:toRem(16px);
+    line-height: toRem(53px);
+    .ic_arrow_right{
+        margin-right:toRem(10px);
+    }
+    .spellingLisText{
+       margin-left: toRem(13px);
+    }
+    &:active{
+        background: #f2f2f5;
+    }
+}
+.borderTop{
+    border-top: 1px solid #f2f2f5;
+}

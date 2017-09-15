@@ -1,0 +1,31 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+
+const home = r => require.ensure([], () => r(require('@/pages/home/home')), 'home');
+const personal = r => require.ensure([], () => r(require('@/pages/personal/personal')), 'personal');
+
+Vue.use(Router)
+
+export default new Router({
+	routes: [
+		// {
+		// 	path: '/',
+		// 	redirect: '/home'
+		// },
+	    {
+		  path: '/',
+		  name: 'home',
+		  component: home
+	    },
+		{
+			path: '/home',
+			name: 'home',
+			component: home
+		},
+		{
+			path: '/personal',
+			name: 'personal',
+			component: personal
+		},
+	]
+})

@@ -1,0 +1,103 @@
+@import "../../sass/conmon.scss";
+@import "../../sass/icon.scss";
+header{
+  height: toRem(56px);
+  padding: 0 toRem(16px);
+  box-sizing: border-box;
+  background: #ffffff;
+  @include flex-pack-justify();
+  img{
+    width: toRem(48px);
+    height: toRem(48px);
+    border-radius: 1000%;
+  }
+}
+.content{
+  background: #f2f2f5;
+  .assess {
+    background: #ffffff;
+    .nav {
+      border-top: toRem(1px) solid #f2f2f5;
+      border-bottom: toRem(1px) solid #f2f2f5;
+      padding: toRem(5px) toRem(16px) toRem(15px);
+      box-sizing: border-box;
+      .box {
+        display: inline-block;
+        padding: 0 toRem(10px);
+        text-align: center;
+        box-sizing: border-box;
+        background: #f7e3d5;
+        color: #3d3d3d;
+        font-size: toRem(11px);
+        height: toRem(24px);
+        line-height: toRem(24px);
+        border-radius: toRem(12px);
+        margin-top: toRem(10px);
+        margin-right: toRem(8px);
+        &:active {
+          opacity: 0.8;
+        }
+      }
+      .active {
+        color: #fff;
+        background: #fa7319;
+      }
+    }
+    .assessContent {
+      margin-bottom: toRem(10px);
+      .assessBox {
+        border-bottom: toRem(1px) solid #f2f2f5;
+        .titleUser {
+          padding: 0 toRem(16px);
+          box-sizing: border-box;
+          @include flex-pack-justify();
+          div {
+            padding: toRem(10px) 0;
+            img {
+              width: toRem(30px);
+              height: toRem(30px);
+              border-radius: 100%;
+            }
+            em {
+              margin-left: toRem(10px);
+              color: #3d3d3d;
+              font-size: toRem(14px);
+            }
+          }
+        }
+        span {
+          color: #999999;
+          font-size: toRem(12px);
+        }
+        .text {
+          padding: 0 toRem(16px) toRem(10px);
+          box-sizing: border-box;
+          color: #141414;
+          font-size: toRem(14px);
+          p {
+            line-height: toRem(16px);
+          }
+          div {
+            color: #999999;
+            font-size: toRem(12px);
+            margin-top: toRem(5px);
+          }
+          .imgList{
+            .imgBox{
+              float: left;
+              margin-top: toRem(10px);
+              img{
+                width: toRem(161px);
+                height:toRem(161px);
+                display: inline-block;
+              }
+            }
+            li:nth-of-type(2n){
+              margin-left: toRem(10px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

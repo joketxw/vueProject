@@ -1,0 +1,151 @@
+@import "./conmon.scss";
+
+.ic_arrow_right{
+  display: inline-block;
+  width:toRem(7px);
+  height: toRem(12px);
+  background: url("/static/images/icon/ic_arrow.png") no-repeat center;
+  background-size: 100%;
+}
+.ic_left_bg_arrow{
+  display: inline-block;
+  width:toRem(32px);
+  height: toRem(32px);
+  background: url("/static/images/icon/ic_bg_arrow.png") no-repeat center;
+  background-size: 100%;
+}
+.ic_bg_share{
+  display: inline-block;
+  width:toRem(32px);
+  height: toRem(32px);
+  background: url("/static/images/icon/ic_bg_share.png") no-repeat center;
+  background-size: 100%;
+}
+.ic_arrow_right{
+  background: url("/static/images/icon/rightPic.png") no-repeat center;
+  background-size: 100%;
+  width:toRem(8px);
+  height: toRem(15px);
+}
+.ic_yes{
+  display: inline-block;
+  background: url("/static/images/icon/ic_yes.png") no-repeat center;
+  background-size: 100%;
+  width:toRem(14px);
+  height: toRem(14px);
+}
+//橙色向右
+.ic_orange_arrow{
+  display: inline-block;
+  width:toRem(7px);
+  height: toRem(12px);
+  background: url("/static/images/icon/ic_orange_arrow.png") no-repeat center;
+  background-size: 100%;
+}
+.ic_buy{
+  display: inline-block;
+  width:toRem(13px);
+  height: toRem(12px);
+  background: url("/static/images/icon/ic_buy.png") no-repeat center;
+  background-size: 100%;
+}
+//灰色向左
+.ic_arrow_left{
+  display: inline-block;
+  width:toRem(18px);
+  height: toRem(18px);
+  background: url("/static/images/icon/ic_arrow_left.png") no-repeat center;
+  background-size: 100%;
+}
+.ic_share{
+  display: inline-block;
+  width:toRem(18px);
+  height: toRem(18px);
+  background: url("/static/images/icon/ic_share.png") no-repeat center;
+  background-size: 100%;
+}
+.ic_back{
+  display: inline-block;
+  width:toRem(60px);
+  height: toRem(60px);
+  background: url("/static/images/home/ic_back.png") no-repeat center;
+  background-size: toRem(12px);
+  vertical-align: middle;
+}
+.ic_del{
+  display: inline-block;
+  width:toRem(40px);
+  height: toRem(40px);
+  background: url("/static/images/icon/ic_del.png") no-repeat center;
+  background-size: 100%;
+}
+.ic_gray_del{
+  display: inline-block;
+  width:toRem(14px);
+  height: toRem(14px);
+  background: url("/static/images/icon/ic_gray_del.png") no-repeat center;
+  background-size: 100%;
+}
+.serve01{
+  display: inline-block;
+  width:toRem(22px);
+  height: toRem(22px);
+  background: url("/static/images/icon/serve01.png") no-repeat center;
+  background-size: 100%;
+}
+.serve02{
+  display: inline-block;
+  width:toRem(22px);
+  height: toRem(22px);
+  background: url("/static/images/icon/serve02.png") no-repeat center;
+  background-size: 100%;
+}
+.serve03{
+  display: inline-block;
+  width:toRem(22px);
+  height: toRem(22px);
+  background: url("/static/images/icon/serve03.png") no-repeat center;
+  background-size: 100%;
+}
+.serve04{
+  display: inline-block;
+  width:toRem(22px);
+  height: toRem(22px);
+  background: url("/static/images/icon/serve04.png") no-repeat center;
+  background-size: 100%;
+}
+.ic_home{
+  display: inline-block;
+  width:toRem(21px);
+  height: toRem(18px);
+  background: url("/static/images/home/home.png") no-repeat center;
+  background-size: 100%;
+}
+.spellStart{
+  display: inline-block;
+  width:toRem(35px);
+  height: toRem(14px);
+  background: url("/static/images/home/spellStart.png") no-repeat center;
+  background-size: 100%;
+}
+.ic_about{
+  display: inline-block;
+  width:toRem(12px);
+  height: toRem(12px);
+  background: url("/static/images/icon/ic_about.png") no-repeat center;
+  background-size: 100%;
+}
+.ic_hot{
+  display: inline-block;
+  width:toRem(12px);
+  height: toRem(12px);
+  background: url("/static/images/icon/ic_hot.png") no-repeat center;
+  background-size: 100%;
+}
+.white-arrow-right{
+  display: inline-block;
+  width:toRem(7px);
+  height: toRem(12px);
+  background: url("/static/images/icon/white-arrow-right.png") no-repeat center;
+  background-size: 100%;
+}

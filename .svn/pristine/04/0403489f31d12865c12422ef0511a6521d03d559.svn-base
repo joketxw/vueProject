@@ -1,0 +1,54 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+
+const home = r => require.ensure([], () => r(require('@/pages/home/home')), 'home');
+const goodsDetail = r => require.ensure([], () => r(require('@/pages/home/goodsDetail')), 'home');
+const personal = r => require.ensure([], () => r(require('@/pages/personal/personal')), 'personal');
+
+Vue.use(Router)
+
+const router=new Router({
+	routes: [
+		// {
+		// 	path: '/',
+		// 	redirect: '/home'
+		// },
+	    {
+		  path: '/',
+		  component: home
+	    },
+		{
+			path: '/home',
+			name: 'home',
+			component: home
+		},
+        {
+            path: '/goodsDetail',
+            name: 'goodsDetail',
+            component: goodsDetail
+        },
+		{
+			path: '/personal',
+			name: 'personal',
+			component: personal
+		},
+	]
+})
+
+// 判断是否需要登录权限 以及是否登录
+router.beforeEach((to, from, next) => {
+  if(to.matched.some(res => res.meta.requireAuth)) { // 判断是否需要登录权限
+    if(localStorage.getItem('openid')) { // 判断是否登录
+      next()
+    } else { // 没登录则跳转到登录界面
+      next({
+        path: '/home',
+        query: { redirect: to.fullPath }
+      });
+      window.location.reload()
+    }
+  } else {
+    next()
+  }
+});
+export default router

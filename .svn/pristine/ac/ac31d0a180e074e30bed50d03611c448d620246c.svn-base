@@ -1,0 +1,79 @@
+<template>
+    <div class="main flex-wrap">
+        <div class="content flex-con-1" ref="wrapper" id="wrapper">
+            <div class="scroll" id="scroll" ref="scroll">
+                <p>{{user.alias}}</p>
+            </div>
+        </div>
+        <!--弹窗-->
+        <div class="md-mask" :class="{ 'active': md.mask}"></div>
+        <!--微信登录-->
+
+    </div>
+</template>
+
+<script>
+    import Vue from 'vue';
+    import api from '@/fetch/api';
+    import config from '@/config';
+    import common from '@/assets/js/common';
+    import { Swipe, SwipeItem } from 'mint-ui';
+    Vue.component(Swipe.name, Swipe);
+    Vue.component(SwipeItem.name, SwipeItem);
+  export default {
+    data() {
+      return {
+        user:'',
+        md: {
+          mask: false,
+          wxLoginCommand:false
+        },
+      }
+    },
+    created(){
+        let openId;
+        let self=this;
+        switch (config.start.isTest){
+          case 0:  openId=localStorage.getItem("openId");openId ? self.goLogin(openId) : self.showMd('wxLoginCommand');break;
+          case 1:  openId=config.start.testOpenId;self.goLogin(openId);break;
+          case 2:  openId=config.start.officialOpenId;self.goLogin(openId);break;
+        }
+
+    },
+    mounted(){
+      console.log(this.user)
+    },
+    methods:{
+      showMd: function(md) {
+        this.md[md] = true;
+        this.md.mask = true;
+      },
+      closeMd: function(md) {
+        this.md[md] = false;
+        this.md.mask = false;
+      },
+       goLogin:function (openId) {//登录接口
+         let self=this;
+         api.login(openId).then((response)=>{
+           self.user=response.data;
+           self.$store.dispatch('setUserInfo',response.data);
+           console.log(this.$store.getters.getUserInfo);
+         })
+       },
+      toLogin:function () {//微信登录
+        common.goToLogin();
+        //this.closeMd('wxLoginCommand');
+      }
+    },
+    computed: {
+
+    },
+    filters:{
+
+    },
+  }
+</script>
+
+<style rel="stylesheet/scss" lang="scss" scoped>
+    @import '../../assets/sass/home/home.scss';
+</style>

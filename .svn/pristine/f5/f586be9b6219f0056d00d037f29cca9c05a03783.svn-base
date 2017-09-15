@@ -1,0 +1,54 @@
+<template>
+    <header class="flex-wrap header" id="header">
+        <i class="ic_back" @click="goBack"></i>
+        <h1 class="flex-con-1">{{Msg.title}}</h1>
+        <router-link tag="div" to=Msg.rightUrl class="header-right" v-html=Msg.rightMsg></router-link>
+    </header>
+</template>
+
+<script>
+  export default {
+    data(){
+      return{
+
+      }
+    },
+    props:["Msg"],
+    created(){
+
+    },
+    methods:{
+      goBack(){
+        this.$router.go(-1)
+      }
+    }
+  }
+</script>
+
+<style rel="stylesheet/scss" lang="scss">
+    @import '../assets/sass/conmon.scss';
+    @import '../assets/sass/icon.scss';
+    header{
+        height: toRem(60px);
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index:100;
+    .ic_back{
+        position: absolute;
+        left: 0;
+        top:0;
+        z-index:99;
+        &:active{
+          opacity: 0.6;
+         }
+    }
+        h1{
+            display: inline-block;
+            vertical-align: middle;
+            line-height:toRem(60px);
+            text-align: center;
+        }
+    }
+</style>

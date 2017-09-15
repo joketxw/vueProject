@@ -1,0 +1,47 @@
+<template>
+    <div class="main">
+        <header>
+            <i></i>
+            <h2></h2>
+            <h4></h4>
+        </header>
+        <div class="content flex-con-1" ref="wrapper" id="wrapper">
+            <div class="scroll" id="scroll" ref="scroll">
+
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    import Vue from 'vue'
+    import { Swipe, SwipeItem } from 'mint-ui';
+    Vue.component(Swipe.name, Swipe);
+    Vue.component(SwipeItem.name, SwipeItem);
+    export default {
+        data() {
+            return {
+
+            }
+        },
+        created(){
+
+        },
+        mounted(){
+
+        },
+        methods:{
+
+        },
+        computed: {
+
+        },
+        filters:{
+
+        },
+    }
+</script>
+
+<style rel="stylesheet/scss" lang="scss" scoped>
+    @import '../../assets/sass/home/goodsDetail';
+</style>

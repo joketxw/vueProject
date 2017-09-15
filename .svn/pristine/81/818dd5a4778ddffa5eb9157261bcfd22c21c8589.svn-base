@@ -1,0 +1,122 @@
+<template>
+    <div class="main">
+        <header>拼实惠</header>
+        <div class="content flex-con-1" ref="wrapper" id="wrapper">
+            <div class="scroll" id="scroll" ref="scroll">
+                <div class="swiper-container">
+                    <mt-swipe :auto="3000">
+                        <mt-swipe-item class="goods_img">
+                            <img src="/static/images/home/swiper.png" alt=""/>
+                        </mt-swipe-item>
+                        <mt-swipe-item class="goods_img">
+                            <img src="/static/images/home/swiper.png" alt=""/>
+                        </mt-swipe-item>
+                        <mt-swipe-item class="goods_img">
+                            <img src="/static/images/home/swiper.png" alt=""/>
+                        </mt-swipe-item>
+                    </mt-swipe>
+                </div>
+                <div class="text flex-wrap flex-center flex-pack-center">
+                    <div>
+                        <p>专属推荐 • 一起拼实惠 </p>
+                        <p>全网最低价,品质有保障 </p>
+                    </div>
+                </div>
+                <ul class="goodsList">
+                    <li>
+                        <img src="/static/images/home/goodsPic.png" alt="" class="goodsPic">
+                        <div  class="goodsText">
+                            <p>[90-150斤可穿]2017春装新款女装中长款毛衣女开衫宽松大码针织衫春季外套女上衣</p>
+                            <div class="flex-wrap line">
+                                <div class="left flex-wrap flex-center">
+                                    <div>¥ <span>34.5</span></div>
+                                    <em>已拼1.7万件</em>
+                                </div>
+                                <div class="right flex-wrap flex-center">
+                                    <div class="imgList">
+                                        <img src="/static/images/home/person.png" alt="">
+                                        <img src="/static/images/home/person.png" alt="">
+                                    </div>
+                                    <router-link tag="div" to="/goodsDetail" class="toPin flex-wrap flex-center">
+                                        <span>去拼单</span>
+                                        <i class="ic_arrow_left pos"></i>
+                                    </router-link>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--弹窗-->
+        <div class="md-mask" :class="{ 'active': md.mask}"></div>
+        <!--微信登录-->
+
+    </div>
+</template>
+
+<script>
+    import Vue from 'vue';
+    import api from '@/fetch/api';
+    import config from '@/config';
+    import common from '@/assets/js/common';
+    import { Swipe, SwipeItem } from 'mint-ui';
+    Vue.component(Swipe.name, Swipe);
+    Vue.component(SwipeItem.name, SwipeItem);
+    export default {
+        data() {
+          return {
+        user:'',
+        md: {
+          mask: false,
+          wxLoginCommand:false
+        },
+          }
+        },
+        created(){
+        let openId;
+        let self=this;
+        switch (config.start.isTest){
+          case 0:  openId=localStorage.getItem("openId");openId ? self.goLogin(openId) : self.showMd('wxLoginCommand');break;
+          case 1:  openId=config.start.testOpenId;self.goLogin(openId);break;
+          case 2:  openId=config.start.officialOpenId;self.goLogin(openId);break;
+        }
+
+        },
+        mounted(){
+      console.log(this.user)
+        },
+        methods:{
+      showMd: function(md) {
+        this.md[md] = true;
+        this.md.mask = true;
+      },
+      closeMd: function(md) {
+        this.md[md] = false;
+        this.md.mask = false;
+      },
+       goLogin:function (openId) {//登录接口
+         let self=this;
+         api.login(openId).then((response)=>{
+           self.user=response.data;
+           self.$store.dispatch('setUserInfo',response.data);
+           console.log(this.$store.getters.getUserInfo);
+         })
+       },
+      toLogin:function () {//微信登录
+        common.goToLogin();
+        //this.closeMd('wxLoginCommand');
+      }
+        },
+        computed: {
+
+        },
+        filters:{
+
+        },
+  }
+</script>
+
+<style rel="stylesheet/scss" lang="scss" scoped>
+    @import '../../assets/sass/home/home.scss';
+</style>

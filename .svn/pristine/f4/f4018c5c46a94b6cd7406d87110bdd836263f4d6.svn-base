@@ -1,0 +1,12 @@
+import axios from 'axios'
+
+import * as type from './mutation-types.js'
+
+export default {
+
+    // setSignOut({          //demo
+    //     commit
+    // }) {
+    //     commit(type.LOGINING, false);
+    // },
+}

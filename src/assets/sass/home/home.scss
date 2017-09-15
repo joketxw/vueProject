@@ -1,0 +1,102 @@
+
+@import "../../sass/conmon.scss";
+@import "../../sass/icon.scss";
+header{
+  position: relative;
+  height:toRem(56px);
+  @include setfont(toRem(19px),#fff,toRem(56px));
+  background: #fa7319;
+  text-align: center;
+  font-weight: bold;
+  z-index: 99;
+}
+.content{
+  .swiper-container{
+    width: 100%;
+    height:toRem(135px);
+    img{
+      width: 100%;
+    }
+  }
+  .text{
+    height: toRem(65px);
+    background: #fff;
+    p:nth-of-type(1){
+      color: #3d3d3d;
+      font-size: toRem(14px);
+    }
+    p:nth-of-type(2){
+      padding-top: toRem(8px);
+      color: #999999;
+      font-size: toRem(12px);
+      text-align: center;
+    }
+  }
+  .goodsList{
+    li{
+      .goodsPic{
+        width: 100%;
+        height:toRem(165px);
+      }
+      .goodsText{
+        padding: 0 toRem(16px);
+        box-sizing: border-box;
+        p{
+          color: #3d3c3c;
+          font-size: toRem(14px);
+          line-height: toRem(18px);
+          @include overflowTwo();
+          padding: toRem(8px) 0;
+          letter-spacing: toRem(1px);
+        }
+        .line{
+          @include flex-pack-justify();
+          .left{
+            color: #f5495b;
+            font-size: toRem(12px);
+            span{
+              font-size: toRem(19px);
+            }
+            em{
+              color: #999999;
+              margin-left: toRem(10px);
+            }
+          }
+          .right{
+            .imgList{
+              img{width: toRem(24px);
+                height: toRem(24px);
+                border-radius: 100%;
+              }
+            }
+            .toPin{
+              background: #fa7319;
+              color: #fff;
+              font-size: toRem(14px);
+              height: toRem(32px);
+              width: toRem(99px);
+              border-radius: toRem(16px);
+              @include  flex-pack-center();
+              margin-left: toRem(5px);
+              &:active{
+                opacity: 0.8;
+              }
+              i{
+                margin-left:toRem(10px) ;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.wxDialogue{
+  width: toRem(160px);
+  height: toRem(120px);
+  margin-top: toRem(-120px)/2;
+  margin-left: toRem(-160px)/2;
+  background: #fa7319;
+}

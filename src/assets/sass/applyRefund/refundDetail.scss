@@ -1,0 +1,60 @@
+@import "../../sass/conmon.scss";
+@import "../../sass/icon.scss";
+
+.content{
+  background: #f7f7fa;
+  .goodsBox{
+    height: toRem(100px);
+    padding: 0 toRem(14px);
+    background: #ffffff;
+    margin-bottom: 0.2rem;
+    img{
+      width: toRem(84px);
+      height: toRem(84px);
+    }
+    .goodsInfo{
+      margin-left: 0.3rem;
+      p:nth-of-type(1){
+        color: #3d3d3d;
+        font-size: toRem(14px);
+        line-height: toRem(16px);
+        text-align: justify;
+        @include overflowTwo();
+      }
+      p:nth-of-type(2){
+        color: #999;
+        font-size: toRem(12px);
+        line-height: toRem(14px);
+        text-align: justify;
+        margin-top: 0.15rem;
+      }
+    }
+  }
+  .reason{
+    height: toRem(48px);
+    @include flex-pack-justify();
+    background: #ffffff;
+    padding: 0 toRem(18px) 0 toRem(14px);
+    border-bottom: $border;
+    span:nth-of-type(1){
+      color: #3d3d3d;
+      font-size: toRem(14px);
+    }
+    span:nth-of-type(2){
+      color: #999;
+      font-size: toRem(14px);
+     .ic_arrow_right{
+       position: relative;
+       top: 1.5px;
+       left: 5px;
+     }
+    }
+    em{
+      color: #fa7319;
+      font-size: toRem(16px);
+    }
+    &:active{
+      background: $bodyBg;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "./conmon.scss";
+
+.ic_arrow_left{
+  display: inline-block;
+  width:toRem(7px);
+  height: toRem(12px);
+  background: url("/static/images/icon/ic_arrow.png") no-repeat center;
+  background-size: 100%;
+}
+.ic_arrow_right{
+  background: url("/static/images/icon/rightPic.png") no-repeat center;
+  background-size: 100%;
+  width:toRem(8px);
+  height: toRem(15px);
+}
+.ic_back{
+  display: inline-block;
+  width:toRem(60px);
+  height: toRem(60px);
+  background: url("/static/images/home/ic_back.png") no-repeat center;
+  background-size: toRem(12px);
+  vertical-align: middle;
+}

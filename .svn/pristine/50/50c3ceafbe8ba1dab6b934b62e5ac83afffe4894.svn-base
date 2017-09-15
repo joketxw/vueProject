@@ -1,0 +1,59 @@
+
+//武汉钱赚宝
+const cdnIp = 'm.wlwch.cn';
+const host = 'ws.wlwch.cn';
+//const host = '192.168.1.11:8080';
+
+
+const start = {
+	isTest : 2, // 0 ： 非测试环境  1： 开发环境测试  2： 生产环境测试
+	currentVersion : 4,
+	officialOpenId : 'oJs9r0zbcGoKkZJWMQfqG0xIXA9E',
+	testOpenId : 'wxOpenId_001018'
+};
+const testArr = [
+  'wxOpenId_001018',
+  'oJs9r03l9kZQ4sIJwJ8FvaxPEF7U',  //龚立峰
+  'oJs9r09TgGwpONemNifY8441qEI0', // 胡涛
+  'oJs9r0yPSg-2p8qIZfYDEM73tQFI',// 海奥
+  'oJs9r0zbcGoKkZJWMQfqG0xIXA9E',// 建归
+  'oJs9r0wmtIJC_GWNvD_bNEOMZ2pw',// 肖文
+  'oJs9r0x-c1cx5y0NJ1aHtzBQ0wfM',// 孙斌
+   'oJs9r00h8epSN2RkHldK_wIm1PKc',//任伟
+   'oJs9r0-V25xTRf2f_E1XL_6eqsfA',//樊婷
+  'oJs9r0wH6Ndeuu4xRa3p1hTslnqY',//苏佳伟
+];
+const ip = {
+	user : 'http://'+ host +'/user',
+	customer : 'http://'+ host +'/customer',
+	portal : 'http://'+ host +'/portal',
+	robBuy : 'http://'+ host +'/robBuy',
+	trade : 'http://'+ host +'/trade',
+	room : 'http://'+ host +'/room',
+	order:'http://'+ host +'/',
+    lottery:'http://'+ host +'/lottery',
+    auction:'http://'+ host +'/auction',
+	customerDetailsUrl : 'http://www.wlwch.cn/rd-platform/onlineUser/userDetails.do'
+};
+const ws = {
+	customer : 'ws://'+ host +'/customer',
+	roomCard : 'ws://'+ host +'/room',
+	robBuy : 'ws://'+ host +'/robBuy',
+    auction:'ws://'+ host +'/auction',
+};
+const kuai3={
+  	isShow: true,
+  	gxkuai3:'http://gx.wlwch.cn/',
+  	//gxkuai3:'http://192.168.1.11:8282/',
+  	hbkuai3:'http://hb.wlwch.cn/',
+  	ahkuai3:'http://ah.wlwch.cn/',
+};
+module.exports = {
+	host : host,
+	cdnIp : cdnIp,
+	ip : ip,
+	start : start,
+	ws : ws,
+    kuai3 : kuai3,
+    testArr:testArr,
+};

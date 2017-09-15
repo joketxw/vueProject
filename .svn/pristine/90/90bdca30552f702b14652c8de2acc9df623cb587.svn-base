@@ -1,0 +1,41 @@
+<template>
+    <footer>
+        <ul class="flex-wrap">
+            <router-link tag='li' :to="'/' + footerList[0].className" :class="{'home' : true,'active' : footerList[0].active }">{{footerList[0].name}}</router-link>
+            <router-link tag='li' :to="'/' + footerList[1].className" :class="{'news' : true,'active' : footerList[1].active}"><i :class="{'newActive' : footer.isNew}"></i>{{footerList[1].name}}</router-link>
+            <router-link tag='li' :to="'/' + footerList[2].className" :class="{'mine' : true,'active' : footerList[2].active }">{{footerList[2].name}}</router-link>
+        </ul>
+    </footer>
+</template>
+
+<script>
+
+  export default {
+    data(){
+      return{
+        isNew:false,
+        footerList : [
+          {name: '首页',className:'home',active : false},
+          {name: '消息',className:'news',active : false},
+          {name: '我的',className:'mine',active : false}
+        ]
+      }
+    },
+    props:{
+      footer:{
+        type: Object
+      }
+    },
+    created(){
+
+    },
+    methods:{
+
+    }
+  }
+</script>
+
+<style rel="stylesheet/scss" lang="scss">
+
+
+</style>

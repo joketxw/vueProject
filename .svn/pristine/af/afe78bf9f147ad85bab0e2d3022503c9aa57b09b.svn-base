@@ -1,0 +1,120 @@
+@charset 'utf8';
+
+$fontColor: #333;
+//$bgColor: linear-gradient(to right,#5436c1,#ff5100);
+$bgColor: #ff4040;
+$bodyBg : #f5f2f0;
+$border: solid 0.1rem #f6f6f6;
+$red: #ff4040;
+$border-radius:.3rem;
+$head-active: #e01526;
+body{
+    overflow: hidden;
+   .mask{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      z-index: 100;
+      background-color: #151313;
+      opacity: .7
+    }
+}
+.mint-indicator-wrapper{
+    z-index: 999;
+}
+@function toRem($px){
+  @return $px/37.5px * 1rem;
+}
+@mixin flex($flex){
+    -webkit-box-flex: $flex;
+    -webkit-flex: $flex;
+    flex: $flex;
+}
+@mixin overEllipsis(){
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+@mixin flex-pack-justify(){//两端对其
+-webkit-box-pack:justify;
+  -webkit-justify-content:space-between;
+  -ms-flex-pack:justify;
+  justify-content:space-between;
+}
+@mixin flex-pack-center(){//水平居中
+-webkit-box-pack:center;
+  -webkit-justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center;
+}
+@mixin flex-pack-end(){
+  -webkit-box-pack:flex-end;
+  -webkit-justify-content:flex-end;
+  -ms-flex-pack:flex-end;
+  justify-content:flex-end;
+}
+@mixin setfont($font-size,$color,$line-height){
+  line-height: $line-height;
+  font-size: $font-size;
+  color: $color;
+}
+@mixin setBtn($width,$height,$font-size,$color,$background){
+  width: $width;
+  height: $height;
+  font-size: $font-size;
+  color: $color;
+  background: $background;
+  border: 0;
+  border-radius: 0.3rem;
+}
+//向下三角形
+@mixin triangle($font-size,$background) {
+  width:0;
+  height:0;
+  border-left:$font-size solid transparent;
+  border-right: $font-size solid transparent;
+  border-top: $font-size solid $background;
+}
+//向右三角形
+@mixin triangleRight($font-size,$background) {
+  width:0;
+  height:0;
+  border-top:$font-size solid transparent;
+  border-bottom: $font-size solid transparent;
+  border-left: $font-size solid $background;
+}
+//超出两行省略....
+@mixin overflowTwo(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.show{
+   display: block!important;
+}
+.hide{
+    display: none;
+}
+
+.md-mask{
+  z-index: 900;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.md-mask.active{
+  opacity: 1;
+  visibility: visible;
+}

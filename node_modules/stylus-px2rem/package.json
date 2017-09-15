@@ -1,0 +1,95 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "stylus-px2rem",
+        "scope": null,
+        "escapedName": "stylus-px2rem",
+        "name": "stylus-px2rem",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\yxh\\Desktop\\vue-demo"
+    ]
+  ],
+  "_from": "stylus-px2rem@latest",
+  "_id": "stylus-px2rem@1.0.14",
+  "_inCache": true,
+  "_location": "/stylus-px2rem",
+  "_nodeVersion": "6.10.3",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/stylus-px2rem-1.0.14.tgz_1497248123962_0.8201875060331076"
+  },
+  "_npmUser": {
+    "name": "jslite",
+    "email": "398188662@qq.com"
+  },
+  "_npmVersion": "4.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "stylus-px2rem",
+    "scope": null,
+    "escapedName": "stylus-px2rem",
+    "name": "stylus-px2rem",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/stylus-px2rem/-/stylus-px2rem-1.0.14.tgz",
+  "_shasum": "59858c8405dff2d0ba1ee2d3e66903de0764b0d7",
+  "_shrinkwrap": null,
+  "_spec": "stylus-px2rem",
+  "_where": "C:\\Users\\yxh\\Desktop\\vue-demo",
+  "author": {
+    "name": "kenny wang",
+    "email": "398188662@qq.com"
+  },
+  "bugs": {
+    "url": "https://github.com/jaywcjlove/stylus-px2rem/issues"
+  },
+  "dependencies": {
+    "stylus": "^0.54.2"
+  },
+  "description": "Stylus convert px to rem in css files with optional fallback to px.",
+  "devDependencies": {
+    "mocha": "^3.3.0",
+    "should": "^11.2.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "59858c8405dff2d0ba1ee2d3e66903de0764b0d7",
+    "tarball": "https://registry.npmjs.org/stylus-px2rem/-/stylus-px2rem-1.0.14.tgz"
+  },
+  "gitHead": "7158f67c58f887c9ac441a4e3c6bd0484ddf48c6",
+  "homepage": "https://github.com/jaywcjlove/stylus-px2rem#readme",
+  "keywords": [
+    "px2rem",
+    "rem",
+    "px"
+  ],
+  "license": "MIT",
+  "main": "lib/px2rem.js",
+  "maintainers": [
+    {
+      "name": "jslite",
+      "email": "398188662@qq.com"
+    }
+  ],
+  "name": "stylus-px2rem",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaywcjlove/stylus-px2rem.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "version": "1.0.14"
+}

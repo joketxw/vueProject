@@ -1,0 +1,53 @@
+@import "../../sass/conmon.scss";
+@import "../../sass/icon.scss";
+
+header{
+  height: toRem(56px);
+  padding: 0 toRem(16px);
+  box-sizing: border-box;
+  background: #ffffff;
+  @include flex-pack-justify();
+  img{
+    width: toRem(48px);
+    height: toRem(48px);
+    border-radius: 1000%;
+  }
+}
+.mainNav{
+  height: toRem(36px);
+  position: relative;
+  nav{
+    color: #3d3d3d;
+    font-size: toRem(14px);
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  .active{
+    color: #fa7319;
+    border-bottom: toRem(2px) solid #fa7319;
+    &:before{
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: toRem(5px) solid transparent;
+      border-bottom: toRem(5px) solid #fa7319;
+      border-right: toRem(5px) solid transparent;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+.content{
+  background: #f2f2f5;
+  .title{
+    padding: toRem(10px) toRem(16px);
+    box-sizing: border-box;
+    background: #fff;
+    color: #3d3d3d;
+    font-size: toRem(14px);
+  }
+  img{
+    width: 100%;
+  }
+}

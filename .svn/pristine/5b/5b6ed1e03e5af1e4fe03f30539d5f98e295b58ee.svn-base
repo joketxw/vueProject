@@ -1,0 +1,115 @@
+<template>
+    <footer>
+        <ul class="flex-wrap">
+            <router-link class="flex-con-1" tag='li' :to="'/' + footerList[0].className" :class="{'home' : true,'active' : footerList[0].active }">{{footerList[0].name}}</router-link>
+            <router-link class="flex-con-1" tag='li' :to="'/' + footerList[1].className" :class="{'activity' : true,'active' : footerList[1].active}">{{footerList[1].name}}</router-link>
+            <router-link class="flex-con-1" tag='li' :to="'/' + footerList[2].className" :class="{'personal' : true,'active' : footerList[2].active }">{{footerList[2].name}}</router-link>
+        </ul>
+    </footer>
+</template>
+
+<script>
+
+  export default {
+    data(){
+      return{
+        footerList : [
+          {name: '首页',className:'home',active : false},
+          {name: '活动',className:'activity',active : false},
+          {name: '我的',className:'personal',active : false}
+        ]
+      }
+    },
+    props:["footer"],
+    created(){
+       if(this.footer=='home'){
+         this.footerList[0].active=true;
+       }else if(this.footer=='activity'){
+         this.footerList[1].active=true;
+       }else if(this.footer=='personal'){
+         this.footerList[2].active=true;
+       }
+    },
+    methods:{
+
+    }
+  }
+</script>
+
+<style rel="stylesheet/scss" lang="scss">
+    @import '../assets/sass/conmon.scss';
+footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: toRem(53px);
+    border-top: 1px solid #f5f2f0;
+    background:#fff;
+    ul{
+        height: toRem(53px);
+        margin-top:0.2rem;
+        li{
+            line-height:toRem(21px);
+            text-align: center;
+            color: #8a8a8a;
+            font-size: toRem(12px);
+        }
+    .home{
+    &:before{
+         content: '';
+         display: block;
+         width: toRem(22px);
+         height: toRem(22px);
+         background: no-repeat center url(../../static/images/home/ic_home.png);
+         background-size: 100%;
+         margin: 0 auto;
+     }
+    }
+    .home.active{
+        color: #fa7319;
+    &:before{
+         background: no-repeat center url(../../static/images/home/ic_home_a.png);
+         background-size: 100%;
+     }
+    }
+    .activity{
+    &:before{
+         content: '';
+         display: block;
+         width: toRem(22px);
+         height: toRem(22px);
+         background: no-repeat center url(../../static/images/home/ic_activity.png);
+         background-size: 100%;
+         margin: 0 auto;
+     }
+    }
+    .activity.active{
+        color: #fa7319;
+    &:before{
+         background: no-repeat center url(../../static/images/home/ic_activity_a.png);
+         background-size: 100%;
+     }
+    }
+    .personal{
+    &:before{
+         content: '';
+         display: block;
+         width: toRem(22px);
+         height: toRem(22px);
+         background: no-repeat center url(../../static/images/home/ic_personal.png);
+         background-size: 100%;
+         margin: 0 auto;
+     }
+    }
+    .personal.active{
+        color: #fa7319;
+    &:before{
+         background: no-repeat center url(../../static/images/home/ic_personal_a.png);
+         background-size: 100%;
+     }
+    }
+    }
+}
+
+</style>

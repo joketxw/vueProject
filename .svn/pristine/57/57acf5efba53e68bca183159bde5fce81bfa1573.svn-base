@@ -1,0 +1,37 @@
+<template>
+   <div class="dialogue" :class="{'bounceIn':isShow,'bounceOut':!isShow,}">
+       <slot></slot>
+   </div>
+</template>
+
+<script>
+  export default {
+    data(){
+      return{
+
+      }
+    },
+    props:["isShow"],
+    created(){
+
+    },
+    methods:{
+
+    }
+  }
+</script>
+
+<style rel="stylesheet/scss" lang="scss">
+    @import '../assets/sass/conmon.scss';
+    .dialogue{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: auto;
+        z-index: 999;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+</style>

@@ -1,0 +1,39 @@
+<template>
+    <div class="main flex-wrap">
+        <div class="content flex-con-1" ref="wrapper" id="wrapper">
+            <div class="scroll" id="scroll" ref="scroll">
+
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+
+  export default {
+    data() {
+      return {
+
+      }
+    },
+    created(){
+
+    },
+    mounted(){
+
+    },
+    methods:{
+
+    },
+    computed: {
+
+    },
+    filters:{
+
+    },
+  }
+</script>
+
+<style rel="stylesheet/scss" lang="scss" scoped>
+    @import '../../assets/sass/personal/personal.scss';
+</style>

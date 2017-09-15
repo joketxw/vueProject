@@ -1,0 +1,84 @@
+<template>
+    <div class="main flex-wrap">
+        <div class="content flex-con-1" ref="wrapper" id="wrapper">
+            <div class="scroll" id="scroll" ref="scroll">
+            	<ul class="menuUl flex-wrap">
+				  <li :class="{'active':showMenu==1}" class="flex-con-1"  @click="changeMenu(1)">全部</li>
+				  <li :class="{'active':showMenu==2}" class="flex-con-1"  @click="changeMenu(2)">待拼单</li>
+				  <li :class="{'active':showMenu==3}" class="flex-con-1"  @click="changeMenu(3)">待发货</li>
+				  <li :class="{'active':showMenu==4}" class="flex-con-1"  @click="changeMenu(4)">待收货</li>
+				  <li :class="{'active':showMenu==5}" class="flex-con-1"  @click="changeMenu(5)">待评价</li>
+		        </ul>
+		        
+		        <div class="listDiv mgTop">
+		        	<div class="topDiv flex-wrap flex-center">
+		        		<div class="flex-wrap flex-center"><div class="huiZ"></div><div class="huiT">拼实惠</div><div class="ic_arrow_right"></div></div>
+		        		<div class="rightText">拼单中,差1人</div>
+		        	</div>
+		        	<div class="contDiv flex-wrap flex-center">
+		        		<img class="goodsPic" src="/static/images/personal/goodsPic.png">
+		        		<div class="contTbox"><div class="contT1">[亏完涨价!]［听歌打电话.蓝牙偏光眼镜］无线运动升级版智能蓝...</div><div class="contT2">规格:中号方形/Y16211黑灰C1 【领券立减5元，再送夜视夹片】</div></div>
+		        		<div class="numBox"><div class="num1"><span class="num1Left">¥</span>54</div><div class="num2">77</div></div>
+		        	</div>
+		        	<div class="settlementDiv">共1件商品  合计: ¥ 39.00（免运费）</div>
+		        	<div class="settlementDiv borderTop">
+		        		<input type="button" class="yellowBtn" value="邀请好友拼单"/>
+		        	</div>
+		        </div>
+		        
+		        <div class="listDiv mgTop">
+		        	<div class="topDiv flex-wrap flex-center">
+		        		<div class="flex-wrap flex-center"><div class="huiZ"></div><div class="huiT">拼实惠</div><div class="ic_arrow_right"></div></div>
+		        		<div class="rightText">待收货</div>
+		        	</div>
+		        	<div class="contDiv flex-wrap flex-center">
+		        		<img class="goodsPic" src="/static/images/personal/goodsPic.png">
+		        		<div class="contTbox"><div class="contT1">[亏完涨价!]［听歌打电话.蓝牙偏光眼镜］无线运动升级版智能蓝...</div><div class="contT2">规格:中号方形/Y16211黑灰C1 【领券立减5元，再送夜视夹片】</div></div>
+		        		<div class="numBox"><div class="num1"><span class="num1Left">¥</span>54</div><div class="num2">x77</div></div>
+		        	</div>
+		        	<div class="settlementDiv">共1件商品  合计: ¥ 39.00（免运费）</div>
+		        	<div class="settlementDiv borderTop">
+		        		<input type="button" class="btnThree" value="延长收货"/>
+		        		<input type="button" class="btnTwo" value="查看物流"/>
+		        		<input type="button" class="btnOne" value="确认收货"/>
+		        	</div>
+		        </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+
+  export default {
+    data() {
+      return {
+         showMenu:"1",
+      }
+    },
+    created(){
+
+    },
+    mounted(){
+
+
+    },
+    methods:{
+            changeMenu(key) {
+				
+				this.showMenu=key;
+				
+			},
+    },
+    computed: {
+
+    },
+    filters:{
+
+    },
+  }
+</script>
+
+<style rel="stylesheet/scss" lang="scss" scoped>
+    @import '../../assets/sass/personal/myOrder.scss';
+</style>

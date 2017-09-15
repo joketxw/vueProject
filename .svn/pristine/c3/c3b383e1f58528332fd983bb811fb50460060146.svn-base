@@ -1,0 +1,84 @@
+@import "../../sass/conmon.scss";
+@import "../../sass/icon.scss";
+
+.menuUl{
+        height: toRem(45px);
+        background: #fff;
+       
+        .active{
+                color: #fa7319;
+                border-bottom: toRem(2px) solid #fa7319;
+        }
+        li{
+            flex: 1;
+            text-align: center;
+            line-height: toRem(45px);
+            color: #3d3d3d;
+            overflow: hidden;
+            font-size: toRem(16px);
+  
+        }
+}
+.listDiv{
+    .topDiv{
+        height: toRem(38px);
+        @include flex-pack-justify();
+        .huiZ{
+            background: no-repeat  center url(/static/images/personal/huiPic.png);
+            background-size:100%;
+            width: toRem(26px);
+            height: toRem(26px);
+            margin: 0 toRem(10px);
+        }
+        .huiT{
+            color: #3d3d3d;
+            font-size:toRem(14px);
+            margin-right: toRem(8px);
+        }
+        .rightText{
+            color: #ff3c36;
+            font-size: toRem(14px);
+            margin-right: toRem(10px);
+        }
+        
+    }
+    .contDiv{
+        background: #f7f7f7;
+        height:toRem(100px);
+        .goodsPic{
+          width: toRem(85px);
+          height:toRem(85px);
+          margin: 0 toRem(10px);
+        }
+        .contTbox{
+            height:toRem(85px);
+            font-size: toRem(12px);
+            .contT2{
+                color: #999999;
+                margin-top: toRem(10px);
+            }
+        }
+        .numBox{
+            width: toRem(85px);
+            height:toRem(85px);
+            text-align: center;
+            .num1{
+                font-size: toRem(16px);
+            }
+            .num2{
+                font-size: toRem(12px);
+                margin-top:toRem(20px);
+                color: #999999;
+            }
+        }
+    }
+    .settlementDiv{
+        height:toRem(44px);
+        line-height: toRem(44px);
+        font-size: toRem(14px);
+        text-align: right;
+    }
+}
+.borderTop{
+    border-top: 1px solid #f2f2f5;
+}

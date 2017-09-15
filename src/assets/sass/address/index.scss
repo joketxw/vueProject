@@ -1,0 +1,100 @@
+@import "../../sass/conmon.scss";
+@import "../../sass/icon.scss";
+
+.content{
+    background: $bodyBg;
+    ul{
+      color: #3d3d3d;
+      li{
+        padding:toRem(14px) toRem(12px);
+        margin-bottom: 0.2rem;
+        background: #ffffff;
+        .top-con{
+          line-height: toRem(30px);
+          position: relative;
+          font-size: toRem(14px);
+          span:nth-of-type(1){
+
+          }
+          span:nth-of-type(2){
+            position: absolute;
+            right:0;
+          }
+        }
+        .middle-con{
+          display: table-cell;
+          vertical-align: middle;
+          font-size: toRem(14px);
+          height: toRem(45px);
+          line-height: toRem(20px);
+        }
+        .bottom-con{
+          position: relative;
+          font-size: toRem(13px);
+          line-height: toRem(18px);
+          border-top: 1px solid $bodyBg;
+          padding-top: 0.3rem;
+         .default{
+           i{
+             display: inline-block;
+             width: toRem(18px);
+             height: toRem(18px);
+             border-radius: 100%;
+             border: 1px solid #999;
+             vertical-align: middle;
+             margin-right: 0.2rem;
+           }
+         }
+          .default-right{
+            position: absolute;
+            right: 0;
+            span:nth-of-type(1){
+              line-height: toRem(12px);
+              &:before{
+                content: '';
+                display: inline-block;
+                width: toRem(16px);
+                height: toRem(19px);
+                background: no-repeat center url(/static/images/icon/ic_edit.png);
+                background-size: 100%;
+                vertical-align: middle;
+                margin-right: 0.2rem;
+              }
+              &:active{
+                opacity: 0.6;
+              }
+            }
+            span:nth-of-type(2){
+              line-height: toRem(12px);
+              margin-left: 0.6rem;
+              &:before{
+                content: '';
+                display: inline-block;
+                width: toRem(19px);
+                height: toRem(20px);
+                background: no-repeat center url(/static/images/icon/ic_delete.png);
+                background-size: 100%;
+                vertical-align: middle;
+                margin-right: 0.2rem;
+              }
+              &:active{
+                opacity: 0.6;
+              }
+            }
+          }
+        }
+      }
+    }
+}
+
+footer{
+  color: #ffffff;
+  font-size: toRem(16px);
+  height: toRem(53px);
+  line-height: toRem(53px);
+  background: #fa7319;
+  text-align: center;
+  &:active{
+    opacity:0.6;
+  }
+}

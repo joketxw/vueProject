@@ -1,0 +1,135 @@
+@charset 'utf8';
+
+$fontColor: #333;
+//$bgColor: linear-gradient(to right,#5436c1,#ff5100);
+$bgColor: #ff4040;
+$bodyBg : #f5f2f0;
+$border: solid 0.1rem #f6f6f6;
+$red: #ff4040;
+$border-radius:.3rem;
+$padding: (16px/14px)*1rem;//距左右1.15rem
+$head-active: #e01526;
+body{
+    overflow: hidden;
+   .mask{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      z-index: 100;
+      background-color: #151313;
+      opacity: .7
+    }
+}
+.ic-toast-success{
+    width: 4rem;
+    height: 3.55rem;
+    display: block;
+    margin: 0 auto;
+    background: no-repeat center url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAABsCAMAAACPWqqOAAAAsVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+3mHKcAAAAOnRSTlMA+fTr/R4w+9oX7+PWv3xUTzUpEwpCBefKx7SUD/bRqIh2alsj3o5wuq2cPMOloYJJmWBFPs4CsWVi1TxGCAAAA4xJREFUaN7t29d2m0AUheFNVwVJCNS7rGq5x7H3+z9YnJXETRoGAYK5yPcE/wXnMKw14L9vnjZQxkwzG1DDcOuQPSjBLpkkzQAKeNVN/qbAUxPuNP7hNFGw5Q+H/2xRLM8w+c5poUgrnZ/doDjlusYvNAtFCa5MfjNAQdwKj+hlFGHY13nCCgVo1hyeMkH+1gZP2vjIW3io8KR6GXlrdTWedJ1/y0OVyrQMDJ7Ws5Azqz5SpqVRokA395ZphwI/lsiX39cpMM67JRibyrTMqhSptZCr9qSiTEvz2qRIyUau5iWq0hLeGxS6yreltXEiWprI02JMZVqmHYpV98iRtdUo1sm1pdFlVMsTBNwAmXOvIlsCiFRKLrLl3+iMYDxCpEnqBwsZCupM2AKXb3oeMrOuRbfcQazL36rTEJloDyqMUmlAzP87gc7WRgaafSZvgfdx/ntBaq9jRtIbiHLDd8bARyrh1JC0eIjy/GVn9wOk0JqYkpYFItn8orZGYl6P6Vrg8qvRbpn8pBtttIDE8Suk3kAC1k6TtTxAwtd4pOq2ca67OiW0V8h4POVg4zzrkrTlBVI3PKm7wBnKq5G0ZQ65jmhRTn3Etf9JGWeOGFYU2QaI52Esb1nH/NyjSG2OGIa3FcqYa8RTvqaINlhCpnmglDlDXPYVhTZ3iOZ1M20BGhUKVWdtiLVnRowWF+eYmxTb2RBp3TMGF+eZMkLPi1i6crc414ERdLeMY+G8epkW+HVGmezxnbViHFMk0KoxSu0hxBdPP5O3yAUGo5jTJT5ZlBjHCgm9jBip//ixJ10tXYvcLaN15sO/S3fCWAZIYUeJgY03jXEOLWhvKNFrwF/rjOUe6VhjSuize8aze0ZK+yozcvOM1BZ6Ri0hMuA6zMAhRCbumd4kRDbCPtPatpGVcledFsCuMo2fbWTJM5hcv41srbXkLUNkbcCENkNkr89E6kNcwLCXqMXHRbSueLZrHxcSGOq0AHOdZ+mVcUErh2folnFREwrlf9Gj3WNcPyxcmlViPGMLl7c3GEctTktOx9DaEvm41ShTWiIvE1PW0kJunuvqtADlEqnMRQ/YBoWqNnLm6eq0ADPBSHWaKMDOUacFqJs8YjRRjGHtuGWPorSM7y1PKM7jiJ9VAhRprn1ueUSxBh8jpd+haH1TnZb3kRop8TudZfCNpkQL8DQiNQ+KeDDVaQFuF7icX/Mthky+Cw7/AAAAAElFTkSuQmCC);
+    background-size: 100%;
+}
+.mint-indicator-wrapper{
+    z-index: 999;
+}
+@function toRem($px){
+  @return $px/37.5px * 1rem;
+}
+@mixin flex($flex){
+    -webkit-box-flex: $flex;
+    -webkit-flex: $flex;
+    flex: $flex;
+}
+@mixin overEllipsis(){
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+@mixin flex-pack-justify(){//两端对其
+-webkit-box-pack:justify;
+  -webkit-justify-content:space-between;
+  -ms-flex-pack:justify;
+  justify-content:space-between;
+}
+@mixin flex-pack-center(){//水平居中
+-webkit-box-pack:center;
+  -webkit-justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center;
+}
+@mixin setfont($font-size,$color,$line-height){
+  line-height: $line-height;
+  font-size: $font-size;
+  color: $color;
+}
+@mixin setBtn($width,$height,$font-size,$color,$background){
+  width: $width;
+  height: $height;
+  font-size: $font-size;
+  color: $color;
+  background: $background;
+  border: 0;
+  border-radius: 0.3rem;
+}
+//向下三角形
+@mixin triangle($font-size,$background) {
+  width:0;
+  height:0;
+  border-left:$font-size solid transparent;
+  border-right: $font-size solid transparent;
+  border-top: $font-size solid $background;
+}
+//向右三角形
+@mixin triangleRight($font-size,$background) {
+  width:0;
+  height:0;
+  border-top:$font-size solid transparent;
+  border-bottom: $font-size solid transparent;
+  border-left: $font-size solid $background;
+}
+//超出两行省略....
+@mixin overflowTwo(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.loadMore{
+   height: 3.14rem;
+   background: #ffffff;
+   color: #999;
+  font-size: 1.15rem;
+  line-height: 3.14rem;
+  text-align: center;
+}
+//缺省页面
+.noInfo{
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+
+}
+.noInfo img{
+    width: 7rem;
+    margin: 0 auto;
+
+}
+.no_record{
+    text-align: center;
+    font-size: 1.15rem;
+    color: #999999;
+    margin-top: 1rem;
+}
+
+.show{
+   display: block!important;
+}
+.hide{
+    display: none;
+}

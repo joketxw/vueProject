@@ -1,0 +1,70 @@
+@import "../../sass/conmon.scss";
+@import "../../sass/icon.scss";
+
+.content{
+  background: #f7f7fa;
+  .goodsBox{
+    height: toRem(100px);
+    padding: 0 toRem(14px);
+    background: #ffffff;
+    margin-bottom: 0.2rem;
+    img{
+      width: toRem(84px);
+      height: toRem(84px);
+    }
+    .goodsInfo{
+      margin-left: 0.3rem;
+      p:nth-of-type(1){
+        color: #3d3d3d;
+        font-size: toRem(14px);
+        line-height: toRem(16px);
+        text-align: justify;
+        @include overflowTwo();
+      }
+      p:nth-of-type(2){
+        color: #999;
+        font-size: toRem(12px);
+        line-height: toRem(14px);
+        text-align: justify;
+        margin-top: 0.15rem;
+      }
+    }
+  }
+  .boxs{
+     background: #ffffff;
+     height: toRem(66px);
+     @include flex-pack-justify();
+     padding: 0 toRem(14px);
+     box-sizing: border-box;
+     border: $border;
+     &:active{
+       background: #f7f7fa;
+     }
+    .left{
+      .boxsInfo{
+        margin-left: 0.2rem;
+        p:nth-of-type(1){
+          color: #3d3d3d;
+          font-size: toRem(14px);
+          line-height: toRem(16px);
+          text-align: justify;
+        }
+        p:nth-of-type(2){
+          color: #999;
+          font-size: toRem(12px);
+          line-height: toRem(14px);
+        };
+      }
+      .icon{
+        width: toRem(28px);
+        height: toRem(28px);
+        text-align: center;
+        line-height: toRem(28px);
+        color: #fa7319;
+        border: 1px solid #fa7319;
+        border-radius: 100%;
+        font-size: toRem(14px);
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+<template>
+    <div class="flex-wrap main">
+        <header>拼实惠</header>
+        <scroll class="wrapper" :probeType="probeType" :listenScroll="listenScroll" ref="scroll">
+            <div class="content">
+                    <div class="swiper-container">
+                        <mt-swipe :auto="3000">
+                            <mt-swipe-item class="goods_img">
+                                <img src="/static/images/home/swiper.png" alt=""/>
+                            </mt-swipe-item>
+                            <mt-swipe-item class="goods_img">
+                                <img src="/static/images/home/swiper.png" alt=""/>
+                            </mt-swipe-item>
+                            <mt-swipe-item class="goods_img">
+                                <img src="/static/images/home/swiper.png" alt=""/>
+                            </mt-swipe-item>
+                        </mt-swipe>
+                    </div>
+                    <div class="text flex-wrap flex-center flex-pack-center">
+                        <div>
+                            <p>专属推荐 • 一起拼实惠 </p>
+                            <p>全网最低价,品质有保障 </p>
+                        </div>
+                    </div>
+                    <ul class="goodsList">
+                        <li>
+                            <img src="/static/images/home/goodsPic.png" alt="" class="goodsPic">
+                            <div  class="goodsText">
+                                <p>[90-150斤可穿]2017春装新款女装中长款毛衣女开衫宽松大码针织衫春季外套女上衣</p>
+                                <div class="flex-wrap line">
+                                    <div class="left flex-wrap flex-center">
+                                        <div>¥ <span>34.5</span></div>
+                                        <em>已拼1.7万件</em>
+                                    </div>
+                                    <div class="right flex-wrap flex-center">
+                                        <div class="imgList">
+                                            <img src="/static/images/home/person.png" alt="">
+                                            <img src="/static/images/home/person.png" alt="">
+                                        </div>
+                                        <router-link tag="div" to="/goodsDetail" class="toPin flex-wrap flex-center">
+                                            <span>去拼单</span>
+                                            <i class="white-arrow-right pos"></i>
+                                        </router-link>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+              </div>
+        </scroll>
+        <v-footer :footer="'home'"></v-footer>
+        <!--弹窗-->
+        <div class="md-mask" :class="{ 'active': md.mask}"></div>
+        <!--微信登录-->
+        <v-dialogue :isShow="md.wxDialogue" class="wxDialogue">
+            <div class="content">
+                <!--<p>1255888</p>-->
+            </div>
+        </v-dialogue>
+        <button @click="showMd('wxDialogue')">ahhahha</button>
+    </div>
+</template>
+
+<script>
+    import Vue from 'vue';
+    import api from '@/fetch/api';
+    import config from '@/config';
+    import common from '@/assets/js/common';
+    import footer from '../../components/vFoot';
+    import dialogue from '../../components/dialogue';
+    import scroll from '../../components/scroll';
+    import axios from 'axios';
+    import { Swipe, SwipeItem } from 'mint-ui';
+    Vue.component(Swipe.name, Swipe);
+    Vue.component(SwipeItem.name, SwipeItem);
+    export default {
+        data() {
+          return {
+        user:'',
+        md: {
+          mask: false,
+          wxDialogue:false
+        },
+          }
+        },
+        created(){
+        let openId;
+        let self=this;
+         this.probeType = 3; // scroll组件需要实施派发scroll事件，且支持swipe
+         this.listenScroll = true; // scroll组件监听scroll事件并派发滚动位置
+        switch (config.start.isTest){
+          case 0:  openId=localStorage.getItem("openId");openId ? self.goLogin(openId) : self.showMd('wxLoginCommand');break;
+          case 1:  openId=config.start.testOpenId;self.goLogin(openId);break;
+          case 2:  openId=config.start.officialOpenId;self.goLogin(openId);break;
+        }
+
+        },
+        mounted(){
+          // 多个接口同时请求
+//          axios.all([api.login('oJs9r0zbcGoKkZJWMQfqG0xIXA9E'), api.login('oJs9r0zbcGoKkZJWMQfqG0xIXA9E')])
+//              .then(axios.spread(function (res1, res2) {
+//                console.log(res1.data)
+//              }));
+        },
+        methods:{
+      showMd: function(md) {
+        this.md[md] = true;
+        this.md.mask = true;
+      },
+      closeMd: function(md) {
+        this.md[md] = false;
+        this.md.mask = false;
+      },
+       goLogin:function (openId) {//登录接口
+         let self=this;
+         api.login(openId).then((response)=>{
+           self.user=response.data;
+           self.$store.dispatch('setUserInfo',response.data);
+         })
+       },
+      toLogin:function () {//微信登录
+        common.goToLogin();
+        //this.closeMd('wxLoginCommand');
+      }
+        },
+      computed: {
+
+      },
+      filters:{
+
+      },
+      components: {//注册组件
+        'v-footer': footer,
+        'v-dialogue': dialogue,
+        'scroll': scroll,
+      }
+  }
+</script>
+
+<style rel="stylesheet/scss" lang="scss" scoped>
+    @import '../../assets/sass/home/home.scss';
+</style>

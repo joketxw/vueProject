@@ -1,0 +1,9 @@
+import * as type from './mutation-types.js'
+
+export default {
+
+    //渲染用户名
+    // [type.GETUSERDATA](state, res){
+    //     state.userName = res;
+    // },
+}

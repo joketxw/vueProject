@@ -1,0 +1,185 @@
+@import "../../sass/conmon.scss";
+@import "../../sass/icon.scss";
+.content{
+    background: #f2f2f5;
+}
+.addressBox{
+    height: toRem(85px);
+    @include flex-pack-justify();
+    border-top: solid 1px #e0e0e0;
+    position: relative;
+    background: #fff;
+    .zhuangShi{
+        position: absolute;
+        height:toRem(5px);
+        width: 100%;
+        bottom: 0;
+    }
+    .leftPic{
+        background: no-repeat  center url(/static/images/personal/addressPic.png);
+        background-size:100%;
+        width: toRem(20px);
+        height: toRem(26px);
+        margin: 0 toRem(10px) 0 toRem(20px);
+    }
+    .centerBox{
+        width: toRem(280px);
+        .centerCont1{
+           @include flex-pack-justify();
+           
+        }
+        .centerCont2{
+            margin-top:toRem(10px);
+        }
+    }
+    .ic_arrow_right{
+        margin: 0 toRem(10px);
+        
+    }
+}
+.contBox{
+    margin-top:toRem(8px);
+    background: #fff;
+    .goodsPic{
+        width: toRem(106px);
+        height:toRem(106px);
+        margin: toRem(10px) toRem(10px);
+    }
+    .contDiv{
+        margin: toRem(10px) toRem(10px) toRem(10px) toRem(10px);
+        .sevenDay{
+            width: toRem(64px);
+            height: toRem(18px);
+            border-radius: toRem(5px);
+            color: #ff3c36;
+            border: 1.2px solid #ff3c36;
+            text-align: center;
+            line-height: toRem(18px);
+            margin-top: toRem(5px);
+        }
+        .cont1{
+            color: #3d3d3d;
+            font-size: toRem(12px);
+            line-height: toRem(15px);
+        }
+        .cont2{
+            color: #999999;
+            font-size: toRem(12px);
+            margin-top: toRem(5px);
+            line-height: toRem(15px);
+        }
+        .price{
+            color: #fa7319;
+            font-size: toRem(16px);
+            margin-top: toRem(5px);
+            @include flex-pack-justify();
+            .priceL{
+                font-size: toRem(12px);
+            }
+        }
+        .num{
+            color: #3d3d3d;
+        }
+    }
+}
+.quantityPurchased{
+    @include flex-pack-justify();
+    height:toRem(50px);
+    background: #fff;
+    border-top: solid #f2f2f5 1px;
+   
+    .jian{
+        width: toRem(36px);
+        height: toRem(36px);
+        line-height:toRem(36px);
+        text-align: center;
+        color: #938f8d;
+        font-size: toRem(30px);
+        background: #fcfaf9;
+        border-radius: toRem(5px);
+        
+    }
+    .buyNum{
+        background: #faf7f5;
+        color: #3d3d3d;
+        width: toRem(60px);
+        height: toRem(36px);
+        line-height:toRem(36px);
+        border: 0;
+        border-radius: toRem(5px);
+        margin: 0 toRem(8px);
+        text-align: center;
+    }
+    .jia{
+        width: toRem(36px);
+        height: toRem(36px);
+        line-height:toRem(36px);
+        text-align: center;
+        color: #938f8d;
+        font-size: toRem(25px);
+        background: #ebe8e6;
+        border-radius: toRem(5px);
+        margin-right: toRem(10px);
+    }
+    .quantityPurchasedT{
+        color: #3d3d3d;
+        font-size:toRem(16px);
+        margin-left: toRem(10px);
+    }
+}
+ .coupon{
+    @include flex-pack-justify();
+    height:toRem(50px);
+    background: #fff;
+    margin-top: toRem(8px);
+    .couponT{
+        color: #3d3d3d;
+        font-size:toRem(16px);
+        margin-left: toRem(10px);
+    }    
+    .redT{
+        color: #ff3c36;
+        font-size:toRem(16px);
+    } 
+    .ic_arrow_right{
+        margin: 0 toRem(10px);
+    }
+}
+.settlement{
+    position: fixed;
+    bottom:0;
+    height:toRem(53px);
+    border-top:#e8e8e8 1px solid;
+    width: 100%;
+    background: #fff;
+    .settlementBtn{
+        background: #fa7319;
+        height:toRem(53px);
+        width: toRem(120px);
+        line-height:toRem(53px);
+        text-align: center;
+        color: #fff;
+        font-size: toRem(19px);
+        position: absolute;
+        right: 0;
+        border: 0;
+    }
+    .settlementCont{
+         height:toRem(53px);
+         width: toRem(120px);
+         position: absolute;
+         right:toRem(120px);
+         .settlementContOne{
+             margin-top: toRem(10px);
+             font-size: toRem(16px);
+         }
+         .settlementContTwo{
+             margin-top: toRem(7px);
+             font-size: toRem(12px);
+             color: #fa7319;
+         }
+         .settlementContOneRed{
+             color: #fa7319;
+         }
+    } 
+}

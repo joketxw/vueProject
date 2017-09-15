@@ -1,0 +1,71 @@
+<template>
+    <div class="main">
+        <v-header :Msg="Msg"></v-header>
+        <div class="content flex-con-1" ref="wrapper" id="wrapper">
+            <div class="scroll" id="scroll" ref="scroll">
+                <div class="head">
+                    <p>我的红包: <em>328.00元</em></p>
+                    <div class="join">参与记录</div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <v-footer :footer="'activity'"></v-footer>
+        <!--弹窗-->
+        <div class="md-mask" :class="{ 'active': md.mask}"></div>
+
+    </div>
+</template>
+
+<script>
+  import Vue from 'vue';
+  import api from '@/fetch/api';
+  import config from '@/config';
+  import common from '@/assets/js/common';
+  import footer from '../../components/vFoot';
+  import header from '../../components/vHead';
+  export default {
+    data() {
+      return {
+        user:'',
+        Msg:{
+           title:'活动中心'
+        },
+        md: {
+          mask: false,
+        },
+      }
+    },
+    created(){
+      let self=this;
+
+    },
+    mounted(){
+
+    },
+    methods:{
+      showMd: function(md) {
+        this.md[md] = true;
+        this.md.mask = true;
+      },
+      closeMd: function(md) {
+        this.md[md] = false;
+        this.md.mask = false;
+      },
+    },
+    computed: {
+
+    },
+    filters:{
+
+    },
+    components: {//注册组件
+      'v-footer': footer,
+      'v-header': header,
+    }
+  }
+</script>
+
+<style rel="stylesheet/scss" lang="scss" scoped>
+    @import '../../assets/sass/activity/activity.scss';
+</style>

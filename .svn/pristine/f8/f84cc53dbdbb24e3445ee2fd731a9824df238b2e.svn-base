@@ -1,0 +1,372 @@
+<template>
+    <div class="flex-wrap main">
+        <scroll class="wrapper content" :probeType="probeType" :pullup="pullup" @scrollToEnd="scrollToEnd" ref="scroll">
+                <div class="content">
+                    <div class="title clearfix">
+                        <i class="ic_left_bg_arrow"></i>
+                        <i class="ic_bg_share"></i>
+                    </div>
+                    <div class="swiper-container">
+                        <mt-swipe :auto="3000">
+                            <mt-swipe-item class="goods_img">
+                                <img src="/static/images/home/goodsPic02.png" alt=""/>
+                            </mt-swipe-item>
+                            <mt-swipe-item class="goods_img">
+                                <img src="/static/images/home/goodsPic02.png" alt=""/>
+                            </mt-swipe-item>
+                            <mt-swipe-item class="goods_img">
+                                <img src="/static/images/home/goodsPic02.png" alt=""/>
+                            </mt-swipe-item>
+                        </mt-swipe>
+                    </div>
+
+                    <!--<img src="/static/images/home/goodsPic02.png" alt="" class="goodsPic">-->
+                    <div class="goodsPrice flex-wrap flex-center">
+                        <div class="flex-wrap flex-center">
+                            <span>49</span>
+                            <em>¥ 399</em>
+                        </div>
+                        <div>已拼1.7万件 • 2人拼单</div>
+                    </div>
+                    <p class="goodsText1">[亏完涨价!]［听歌打电话.蓝牙偏光眼镜］无线运动升级版智能蓝牙耳机眼镜偏光太阳镜立体声听歌接电话头戴式眼镜</p>
+                    <p class="goodsText2">[超长待机时尚蓝牙偏光眼镜]它是太阳眼镜，是MP3随身听，是蓝牙耳机！三者完美结合，不仅能听歌还能接打电话，开车旅行，骑行钓鱼</p>
+                    <ul class="promise flex-wrap flex-center">
+                        <li class="flex-con-1 flex-wrap flex-center flex-pack-center"><i class="ic_yes"></i><em>全场包邮</em></li>
+                        <li class="flex-con-1 flex-wrap flex-center flex-pack-center"><i class="ic_yes"></i><em>7天退换</em></li>
+                        <li class="flex-con-1 flex-wrap flex-center flex-pack-center"><i class="ic_yes"></i><em>48小时发货</em></li>
+                        <li class="flex-con-1 flex-wrap flex-center flex-pack-center"><i class="ic_yes"></i><em>假一赔十</em></li>
+                    </ul>
+                <!--拼单开团-->
+                <div class="pinWrap">
+                    <div class="titleWrap flex-wrap flex-center">
+                        <p class="left"><em>22人</em>正在拼单</p>
+                        <div class="right flex-wrap flex-center">
+                            <span>查看更多</span>
+                            <i class="ic_arrow_right"></i>
+                        </div>
+                    </div>
+                    <ul class="pinWrapList">
+                        <li class="list flex-wrap flex-center">
+                            <div class="left flex-wrap">
+                                <img src="" alt="">
+                                <div class="text flex-center flex-wrap">
+                                    <div>
+                                        <p>村上椿树</p>
+                                        <p>还差<em>1</em>人，剩余12:10:32.108</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right flex-wrap flex-center">
+                                <p>去拼单</p>
+                                <i class="ic_orange_arrow"></i>
+                            </div>
+                        </li>
+                        <li class="list flex-wrap flex-center">
+                            <div class="left flex-wrap">
+                                <img src="" alt="">
+                                <div class="text flex-center flex-wrap">
+                                    <div>
+                                        <p>村上椿树</p>
+                                        <p>还差<em>1</em>人，剩余12:10:32.108</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right flex-wrap flex-center">
+                                <p>去拼单</p>
+                                <i class="ic_orange_arrow"></i>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!--商品评价-->
+                <div class="assess" id="assess">
+                    <div class="assessTitle flex-wrap flex-center">
+                        <p>商品评价(2489)</p>
+                        <p>
+                            <router-link tag="span" to="/goodsAssess">查看全部</router-link>
+                            <i class="ic_arrow_right"></i>
+                        </p>
+                    </div>
+                    <ul class="nav">
+                        <li class="box active">很帅很酷(1769)</li>
+                        <li class="box">便宜(1320)</li>
+                        <li class="box">质量不错(969)</li>
+                        <li class="box">好用(920)</li>
+                        <li class="box">非常满意(869)</li>
+                        <li class="box">发货很快(798)</li>
+                    </ul>
+                    <ul class="assessContent">
+                        <li>
+                            <div class="titleUser flex-center flex-wrap">
+                                <div class="flex-wrap flex-center">
+                                    <img src="" alt="">
+                                    <em>书里黄金</em>
+                                </div>
+                                <span>2017-08-12</span>
+                            </div>
+                            <div class="text">
+                                <p>买的真的很划算，随手一买两天就送到了，准备下周去海边玩耍带着。快递员直接送上来的，服务挺好的。</p>
+                                <div>颜色:墨黑专业炫酷版   尺码:默认</div>
+                            </div>
+                        </li>
+                        <li class="allAssess flex-pack-center flex-wrap">
+                            <router-link tag="button" to="/goodsAssess">查看全部评价</router-link>
+                        </li>
+                    </ul>
+                </div>
+                <!--商品详情-->
+                <div class="goodsDetails">
+                    <div class="titleDetail flex-wrap flex-center">
+                        <p>商品详情</p>
+                        <p class="flex-center flex-wrap">
+                            <em>查看全部</em>
+                            <i class="ic_arrow_right"></i>
+                        </p>
+                    </div>
+                </div>
+                <!--热门推荐-->
+                <div class="recommend">
+                    <p class="title-recommend flex-wrap flex-center flex-pack-center">
+                        <i class="ic_buy"></i>
+                        <em>为你推荐</em>
+                    </p>
+                    <ul class="box clearfix">
+                        <li class="cell">
+                            <img src="" alt="">
+                            <p>无线蓝牙运动耳机【高端不贵狂甩不掉】挂耳式跑步耳机酷</p>
+                            <div class="flex-wrap">
+                                <span>¥ 48.8</span>
+                                <em>已拼1682件</em>
+                            </div>
+                        </li>
+                        <li class="cell">
+                            <img src="" alt="">
+                            <p>无线蓝牙运动耳机【高端不贵狂甩不掉】挂耳式跑步耳机酷</p>
+                            <div class="flex-wrap">
+                                <span>¥ 48.8</span>
+                                <em>已拼1682件</em>
+                            </div>
+                        </li>
+                        <li class="cell">
+                            <img src="" alt="">
+                            <p>无线蓝牙运动耳机【高端不贵狂甩不掉】挂耳式跑步耳机酷</p>
+                            <div class="flex-wrap">
+                                <span>¥ 48.8</span>
+                                <em>已拼1682件</em>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--到底提示-->
+                <div class="footerTip">已经到底啦!只能帮到你这里啦！~</div>
+                </div>
+         </scroll>
+        <div class="md-mask" :class="{ 'active': md.mask}"></div>
+        <!--底部-->
+        <ul class="flex-wrap footer">
+            <li class="flex-con-1 one">
+                <ul class="flex-wrap">
+                    <li class="flex-con-1 flex-center flex-wrap flex-pack-center" id="home">
+                        <router-link tag="div" to="/home">
+                            <i class="logo"></i>
+                            <p>首页</p>
+                        </router-link>
+                    </li>
+                    <li class="flex-con-1  flex-center flex-wrap flex-pack-center" id="collect">
+                        <div>
+                            <i class="logo"></i>
+                            <p>收藏</p>
+                        </div>
+                    </li>
+                    <li class="flex-con-1  flex-center flex-wrap flex-pack-center" id="customer">
+                        <div>
+                            <i class="logo"></i>
+                            <p>客服</p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="flex-con-1 two flex-center flex-wrap flex-pack-center">
+                <div>
+                    <p>¥399</p>
+                    <span>单独购买</span>
+                </div>
+            </li>
+            <li class="flex-con-1 three flex-center flex-wrap flex-pack-center"  @click="showMd('spellMenu')">
+                <div>
+                    <p>¥49</p>
+                    <span>一键拼单</span>
+                </div>
+            </li>
+        </ul>
+        <!--顶部标题-->
+        <div class="title-top">
+            <header class="flex-wrap flex-center">
+                <i class="ic_arrow_left" @click="goBack()"></i>
+                <img src="/static/images/home/goods.png" alt="">
+                <i class="ic_share"></i>
+            </header>
+            <ul class="mainNav flex-wrap">
+                <li class="title flex-con-1" :class="{'active':isActive == '1'}" @click="isSel('1')">宝贝</li>
+                <li class="title flex-con-1" :class="{'active':isActive =='2'}"  @click="isSel('2')">评价</li>
+                <li class="title flex-con-1" :class="{'active':isActive == '3'}"  @click="isSel('3')">详情</li>
+                <li class="title flex-con-1" :class="{'active':isActive =='4'}"  @click="isSel('4')">推荐</li>
+            </ul>
+        </div>
+        <!--正在拼单-->
+        <v-dialogue :isShow="md.spellMenu" class="spellMenu">
+            <div class="content">
+                <div class="titleName">
+                    <h2>正在拼单</h2>
+                    <p>仅显示5组拼单信息</p>
+                </div>
+                <ul class="spellBox">
+                    <li class="box flex-wrap flex-center">
+                        <div class="flex-wrap flex-center">
+                            <img src="" alt="">
+                            <div class="text">
+                                <div class="user flex-center flex-wrap"><span>婷婷</span><p>还差<em>1</em>人</p></div>
+                                <p class="time">剩余12:08:54.128</p>
+                            </div>
+                        </div>
+                        <div class="toSpell" @click="toSpell()">去拼单</div>
+                    </li>
+                </ul>
+                <i class="ic_del" @click="closeMd('spellMenu')"></i>
+            </div>
+        </v-dialogue>
+        <!--选择规格-->
+        <div class="goodsSize" v-show="md.goodsSize">
+            <img src="" alt="" class="picGoods">
+            <i class="ic_gray_del pos" @click="closeMd('goodsSize')"></i>
+            <div class="head flex-wrap flex-pack-center">
+                <div>
+                    <p>¥<span>49-69</span></p>
+                    <p>库存120件</p>
+                    <p><em>已选:</em>中号放心/Y1622黑灰..</p>
+                </div>
+            </div>
+            <h3>颜色分类</h3>
+            <ul class="selectSize">
+                <li class="active">中号方形/Y16221黑灰C1【领券立减5元，再送夜视夹片】</li>
+                <li>大号方形/Y16222黑灰C1【领券立减5元，再送夜视夹片】</li>
+                <li>大号方形/Y16222墨绿C2【领券立减5元，再送夜视夹片】</li>
+                <li>大号方形/Y16222墨绿C2【领券立减5元，再送夜视夹片】</li>
+            </ul>
+            <div class="num flex-center flex-wrap">
+                <p>购买数量</p>
+                <div class="selNum flex-wrap flex-center">
+                    <span class="right">-</span>
+                    <input type="text" value="1">
+                    <span class="left">+</span>
+                </div>
+            </div>
+            <button>确定</button>
+        </div>
+        <!--基础服务-->
+       <div class="serve" v-show="md.serve">
+           <h2>基础服务</h2>
+           <ul>
+               <li class="flex-wrap flex-center">
+                   <i class="serve01"></i>
+                   <div class="text">
+                       <p>全场包邮</p>
+                       <p>所有商品均无条件包邮,不需要付其他任何费用</p>
+                   </div>
+               </li>
+               <li class="flex-wrap flex-center">
+                   <i class="serve02"></i>
+                   <div class="text">
+                       <p>7天退换</p>
+                       <p>商家承诺7天无理由退换货</p>
+                   </div>
+               </li>
+               <li class="flex-wrap flex-center">
+                   <i class="serve03"></i>
+                   <div class="text">
+                       <p>48小时发货</p>
+                       <p>若超时未发货，商家将补偿3元无门槛代金券</p>
+                   </div>
+               </li>
+               <li class="flex-wrap flex-center">
+                   <i class="serve04"></i>
+                   <div class="text">
+                       <p>假一赔十</p>
+                       <p>100%正品，假一赔十</p>
+                   </div>
+               </li>
+           </ul>
+           <button @click="closeMd('serve')">确定</button>
+       </div>
+    </div>
+</template>
+
+<script>
+    import Vue from 'vue'
+    import { Swipe, SwipeItem } from 'mint-ui';
+    import dialogue from '../../components/dialogue';
+    import scroll from '../../components/scroll';
+    Vue.component(Swipe.name, Swipe);
+    Vue.component(SwipeItem.name, SwipeItem);
+    export default {
+        data() {
+            return {
+                isActive:1,
+                md:{
+                    spellMenu:false,
+                    mask:true,
+                    goodsSize:false,
+                    serve:true,
+                },
+            }
+        },
+        components:{
+            'v-dialogue':dialogue,
+            'scroll':scroll,
+        },
+        created(){
+          this.probeType = 3; // scroll组件需要实施派发scroll事件，且支持swipe
+          this.listenScroll = true; // scroll组件监听scroll事件并派发滚动位置
+          this.pullup = true; // scroll组件监听scroll事件并派发滚动位置
+          //this.$refs.scroll.scrollToElement('#assess',500);
+
+        },
+        mounted(){
+
+        },
+        methods:{
+            scrollToEnd:function () {//滚动到底部
+                console.log(1)
+            },
+            toSpell(){
+                this.closeMd('spellMenu');
+                this.showMd('goodsSize');
+            },
+            showMd(md){
+                this.md[md] = true;
+                this.md.mask = true;
+            },
+            closeMd(md){
+                this.md[md] = false;
+                this.md.mask = false;
+            },
+            goBack(){
+                this.$router.go(-1);
+            },
+            isSel(isActive){
+                this.isActive = isActive;
+            }
+        },
+        computed: {
+
+        },
+        filters:{
+
+        },
+    }
+</script>
+
+<style rel="stylesheet/scss" lang="scss" scoped>
+    @import '../../assets/sass/home/goodsDetail.scss';
+</style>
