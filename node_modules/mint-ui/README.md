@@ -82,8 +82,8 @@ Usage
 ## CDN
 RawGit
 
-- https://cdn.rawgit.com/ElemeFE/mint-ui/master/lib/index.js
-- https://cdn.rawgit.com/ElemeFE/mint-ui/master/lib/style.css
+- https://cdn.jsdelivr.net/gh/ElemeFE/mint-ui@master/lib/index.js
+- https://cdn.jsdelivr.net/gh/ElemeFE/mint-ui@master/lib/style.css
 
 NPMCDN
 
